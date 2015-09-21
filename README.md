@@ -4,6 +4,41 @@ Python tools for working with languages (specifically RFC5646) and Who's On Firs
 
 ## Usage
 
+### mapzen.whosonfirst.languages.iso639
+
+```
+import mapzen.whosonfirst.languages
+import pprint
+
+codes = mapzen.whosonfirst.languages.iso639()
+print pprint.pformat(codes.compile())
+```
+
+This would print something like:
+
+```
+{'alpha2': {'aa': {'alpha2': 'aa',
+                   'alpha3': '\xef\xbb\xbfaar',
+                   'english': 'Afar'},
+            'ab': {'alpha2': 'ab', 'alpha3': 'abk', 'english': 'Abkhazian'},
+            'ae': {'alpha2': 'ae', 'alpha3': 'ave', 'english': 'Avestan'},
+            'af': {'alpha2': 'af', 'alpha3': 'afr', 'english': 'Afrikaans'},
+            'ak': {'alpha2': 'ak', 'alpha3': 'aka', 'english': 'Akan'},
+            'am': {'alpha2': 'am', 'alpha3': 'amh', 'english': 'Amharic'},
+	    # and so on...
+ 'alpha3': {'abk': {'alpha2': 'ab', 'alpha3': 'abk', 'english': 'Abkhazian'},
+            'ace': {'alpha2': '', 'alpha3': 'ace', 'english': 'Achinese'},
+            'ach': {'alpha2': '', 'alpha3': 'ach', 'english': 'Acoli'},
+            'ada': {'alpha2': '', 'alpha3': 'ada', 'english': 'Adangme'},
+            'ady': {'alpha2': '',
+                    'alpha3': 'ady',
+                    'english': 'Adyghe; Adygei'},
+            'afa': {'alpha2': '',
+                    'alpha3': 'afa',
+                    'english': 'Afro-Asiatic languages'},
+            # and so on...
+```
+
 ### mapzen.whosonfirst.languages.subtags
 
 ```
