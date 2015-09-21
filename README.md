@@ -1,6 +1,6 @@
 # py-mapzen-whosonfirst-languages
 
-Python tools for working with languages (specifically RFC5646) and Who's On First data
+Python tools for working with languages (specifically RFC5646 and ISO639) and Who's On First data
 
 ## Usage
 
