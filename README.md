@@ -72,8 +72,9 @@ This would print something like:
 
 ## See also
 
+* http://www.w3.org/International/articles/language-tags/
+* http://www.iso.org/iso/home/standards/language_codes.htm
 * https://tools.ietf.org/html/rfc5646
 * https://tools.ietf.org/html/rfc4647
-* http://www.unicode.org/reports/tr35/
 * http://www.loc.gov/standards/iso639-2/faq.html
-* http://www.w3.org/International/articles/language-tags/
+* http://www.unicode.org/reports/tr35/
