@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*-python-*-
+
+import sys
+import json
+import mapzen.whosonfirst.languages
+
+if __name__ == '__main__':
+
+    st = mapzen.whosonfirst.languages.subtags()
+    compiled = st.compile()
+
+    json.dump(compiled, sys.stdout)
+    sys.exit()
