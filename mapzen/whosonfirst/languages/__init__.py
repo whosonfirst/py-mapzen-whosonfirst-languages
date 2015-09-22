@@ -51,6 +51,9 @@ class iso639:
             ln = ln.strip()
 
             alpha3, alpha3_term, alpha2, eng, fre = ln.split('|')
+
+            eng = eng.split('; ')
+
             yield { 'alpha3': alpha3, 'alpha2': alpha2, 'english': eng }
 
     def load_codes(self):
