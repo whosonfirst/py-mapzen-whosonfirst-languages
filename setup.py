@@ -7,8 +7,8 @@ desc = open("README.md").read(),
 
 setup(
     name='mapzen.whosonfirst.languages',
-    namespace_packages=['mapzen', 'mapzen.whosonfirst', 'mapzen.whosonfirst.languages'],
-    version='0.02',
+    namespace_packages=['mapzen', 'mapzen.whosonfirst'],
+    version='0.03',
     description='Python tools for working with languages (specifically RFC5646) and Who\'s On First data',
     author='Mapzen',
     url='https://github.com/mapzen/py-mapzen-whosonfirst-languages',
