@@ -2,6 +2,12 @@
 
 Python tools for working with languages (specifically RFC-5646 and ISO-639) and Who's On First data
 
+## Install
+
+```
+sudo pip install -r requirements.txt .
+```
+
 ## Usage
 
 ### mapzen.whosonfirst.languages.iso639

@@ -24,11 +24,6 @@ setup(
     description='Python tools for working with languages (specifically RFC5646) and Who\'s On First data',
     author='Mapzen',
     url='https://github.com/whosonfirst/py-mapzen-whosonfirst-languages',
-    install_requires=[
-        'requests',
-        ],
-    dependency_links=[
-        ],
     packages=packages,
     scripts=[
         'scripts/wof-languages-compile-subtags',
