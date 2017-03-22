@@ -19,7 +19,7 @@ version = open("VERSION").read()
 
 setup(
     name='mapzen.whosonfirst.languages',
-    namespace_packages=['mapzen', 'mapzen.whosonfirst', 'mapzen.whosonfirst.languages'],
+    namespace_packages=['mapzen', 'mapzen.whosonfirst'],
     version=version,
     description='Python tools for working with languages (specifically RFC5646) and Who\'s On First data',
     author='Mapzen',
