@@ -7,7 +7,14 @@ class language:
 
         self.tag = tag
 
-        major, minor = tag.split("_x_")
+        parts = tag.split("_x_")
+
+        major = parts[0]
+        minor = ""
+
+        if len(parts) > 1:
+            minor = parts[1]
+
         major = major.replace("_", "-")
 
         self.qualifier = minor
@@ -21,30 +28,51 @@ class language:
             raise Exception, "Unrecognized language"
 
         self.macrolang = lang
+        self.region = None
         self.extlang = None
 
         if len(parts) > 1:
 
-            subtag = "-".join(parts[1:])
-            subtag = spec.__SPEC__["subtags"]["extlang"].get(subtag, None)
+            region = parts[1]
+            region = region.upper()
 
-            if not subtag:
-                raise Exception, "Unrecognized subtag"
+            region = spec.__SPEC__["subtags"]["region"].get(region, None)
 
-            macro = subtag["Macrolanguage"]
-            macro = spec.__SPEC__["iso639"]["alpha2"].get(macro, None)
+            if not region:
+                raise Exception, "Unrecognized region"
 
-            if not macro:
-                raise Exception, "Unrecognizaed macrolanguage"
+            self.region = region
 
-            if macro != self.macrolang["alpha3"]:
-                raise Exception, "Invalid macrolanguage for extlang"
+        if len(parts) > 2:
 
-            self.subtag = subtag
+            extlang = parts[2:]
+
+            extlang = spec.__SPEC__["subtags"]["extlang"].get(extlang, None)
+
+            if not extlang:
+                raise Exception, "Unrecognized extlang"
+
+            self.extlang = extlang
 
     def __str__ (self):
 
-        return json.dumps(self.macrolang) + "\n" + json.dumps(self.extlang)
+        possible = []
+        label = []
+
+        name = " ".join(self.macrolang["english"])
+        possible.append(name)
+
+        if self.region:
+            region = " ".join(self.region["Description"])
+            possible.append(region)
+
+        possible.append(self.qualifier)
+
+        for p in possible:
+            if p != "":
+                label.append(p)
+
+        return " ".join(label)
             
             
         

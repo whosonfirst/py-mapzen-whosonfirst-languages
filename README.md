@@ -8,6 +8,10 @@ Python tools for working with languages (specifically RFC-5646 and ISO-639) and 
 sudo pip install -r requirements.txt .
 ```
 
+## Important
+
+This is not feature complete and does **not** account for all of the possible region + extlang combinations. As it is written it accounts only for the simplest of use cases. There is more work to be done.
+
 ## Usage
 
 ### mapzen.whosonfirst.languages.utils.iso639
@@ -74,6 +78,19 @@ This would print something like:
                      'Type': 'extlang'},
 
              # and so on...		     
+```
+
+## Tools
+
+### wof-language-parse
+
+```
+wof-languages-parse spa-005_x_preferred eng-ca_x_variant fre_ca_x_preferred fra_x_colloquial rus
+language tag 'spa-005_x_preferred' becomes Spanish Castilian South America preferred
+language tag 'eng-ca_x_variant' becomes English Canada variant
+language tag 'fre_ca_x_preferred' becomes French Canada preferred
+ERROR:root:failed to parse fra_x_colloquial, because Unrecognized language
+language tag 'rus' becomes Russian
 ```
 
 ## See also
