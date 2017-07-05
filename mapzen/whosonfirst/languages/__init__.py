@@ -66,7 +66,7 @@ class language:
             region = " ".join(self.region["Description"])
             possible.append(region)
 
-        possible.append(self.qualifier)
+        # possible.append(self.qualifier)
 
         for p in possible:
             if p != "":
