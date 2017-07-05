@@ -10,13 +10,13 @@ sudo pip install -r requirements.txt .
 
 ## Usage
 
-### mapzen.whosonfirst.languages.iso639
+### mapzen.whosonfirst.languages.utils.iso639
 
 ```
-import mapzen.whosonfirst.languages
+import mapzen.whosonfirst.utils.languages
 import pprint
 
-codes = mapzen.whosonfirst.languages.iso639()
+codes = mapzen.whosonfirst.languages.utils.iso639()
 print pprint.pformat(codes.compile())
 ```
 
@@ -45,13 +45,13 @@ This would print something like:
             # and so on...
 ```
 
-### mapzen.whosonfirst.languages.subtags
+### mapzen.whosonfirst.languages.utils.subtags
 
 ```
-import mapzen.whosonfirst.languages
+import mapzen.whosonfirst.utils.languages
 import pprint
 
-st = mapzen.whosonfirst.languages.subtags()
+st = mapzen.whosonfirst.languages.utils.subtags()
 print pprint.pformat(st.compile())
 ```
 
