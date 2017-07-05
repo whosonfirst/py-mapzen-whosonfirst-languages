@@ -28,6 +28,7 @@ setup(
     scripts=[
         'scripts/wof-languages-compile-subtags',
         'scripts/wof-languages-compile-iso639-codes',
+        'scripts/wof-languages-dump',
         ],
     download_url='https://github.com/whosonfirst/py-mapzen-whosonfirst-languages/releases/tag/' + version,
     license='BSD')
