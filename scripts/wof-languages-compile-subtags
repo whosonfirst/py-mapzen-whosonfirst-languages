@@ -3,11 +3,11 @@
 
 import sys
 import json
-import mapzen.whosonfirst.languages
+import mapzen.whosonfirst.languages.utils
 
 if __name__ == '__main__':
 
-    st = mapzen.whosonfirst.languages.subtags()
+    st = mapzen.whosonfirst.languages.utils.subtags()
     compiled = st.compile()
 
     json.dump(compiled, sys.stdout)

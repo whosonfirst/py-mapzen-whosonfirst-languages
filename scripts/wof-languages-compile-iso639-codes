@@ -3,11 +3,11 @@
 
 import sys
 import json
-import mapzen.whosonfirst.languages
+import mapzen.whosonfirst.languages.utils
 
 if __name__ == '__main__':
 
-    codes = mapzen.whosonfirst.languages.iso639()
+    codes = mapzen.whosonfirst.languages.utils.iso639()
     compiled = codes.compile()
 
     json.dump(compiled, sys.stdout)
