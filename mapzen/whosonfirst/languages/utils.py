@@ -59,7 +59,7 @@ class iso639:
 
             rsp = requests.get(self.__source__)
             self.__codes__ = StringIO()
-            self.__codes__.write(rsp.content)
+            self.__codes__.write(rsp.content.decode("utf-8"))
 
         self.__codes__.seek(0)
         return self.__codes__
