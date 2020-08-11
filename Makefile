@@ -1,8 +1,8 @@
 install:
-	sudo pip install -r requirements.txt --process-dependency-links .
+	sudo pip3 install -r requirements.txt .
 
 upgrade:
-	sudo pip install --upgrade -r requirements.txt --process-dependency-links .
+	sudo pip3 install --upgrade -r requirements.txt .
 
 spec:
 	./utils/mk-spec.py > mapzen/whosonfirst/languages/spec.py 

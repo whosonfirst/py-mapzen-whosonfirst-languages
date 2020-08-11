@@ -25,7 +25,7 @@ class language:
         lang = spec.__SPEC__["iso639"]["alpha3"].get(lang, None)
 
         if not lang:
-            raise Exception, "Unrecognized language"
+            raise Exception("Unrecognized language")
 
         self.macrolang = lang
         self.region = None
@@ -39,7 +39,7 @@ class language:
             region = spec.__SPEC__["subtags"]["region"].get(region, None)
 
             if not region:
-                raise Exception, "Unrecognized region"
+                raise Exception("Unrecognized region")
 
             self.region = region
 
@@ -50,7 +50,7 @@ class language:
             extlang = spec.__SPEC__["subtags"]["extlang"].get(extlang, None)
 
             if not extlang:
-                raise Exception, "Unrecognized extlang"
+                raise Exception("Unrecognized extlang")
 
             self.extlang = extlang
 

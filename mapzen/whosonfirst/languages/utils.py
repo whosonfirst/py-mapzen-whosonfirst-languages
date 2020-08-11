@@ -2,7 +2,7 @@ import sys
 import logging
 import requests
 import json
-import StringIO
+from io import StringIO
 
 class iso639:
 
@@ -58,7 +58,7 @@ class iso639:
         if not self.__codes__:
 
             rsp = requests.get(self.__source__)
-            self.__codes__ = StringIO.StringIO()
+            self.__codes__ = StringIO()
             self.__codes__.write(rsp.content)
 
         self.__codes__.seek(0)
@@ -148,7 +148,7 @@ class subtags:
 
                     last = k
 
-                except Exception, e:
+                except Exception as e:
 
                     if last == 'Description':
                         v = "%s %s" % (record[last][-1], ln)
@@ -163,5 +163,5 @@ if __name__ == '__main__':
     import pprint
 
     r = iso639()
-    print pprint.pformat(r.compile())
+    print(pprint.pformat(r.compile()))
     
