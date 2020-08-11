@@ -111,8 +111,8 @@ class subtags:
         if not self.__registry__:
 
             rsp = requests.get(self.__source__)
-            self.__registry__ = StringIO.StringIO()
-            self.__registry__.write(rsp.content)
+            self.__registry__ = StringIO()
+            self.__registry__.write(rsp.content.decode("utf-8"))
 
         self.__registry__.seek(0)
         return self.__registry__

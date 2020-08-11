@@ -1,5 +1,5 @@
-import spec	# as in utils/mk-spec.py > mapzen/whosonfirst/languages/spec.py
 import json
+import mapzen.whosonfirst.languages.spec
 
 class language:
 
